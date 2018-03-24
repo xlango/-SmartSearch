@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+     <div>
+         <span id="x1" style="width:300px;height: 100px;">层1</span>
+         <span id="x2" style="width:300px;height: 100px;">层2</span>
+         <span id="x3" style="width:300px;height: 100px;">层3</span>
+         <span id="x4" style="width:300px;height: 100px;">层4</span>
+     </div>
+     <div id="c1" style="background-color:gray;width: 240px;height: 60px ;"></div>
+     <div id="c2" style="background-color:pink;width: 240px;height: 60px;display: none;"></div>
+     <div id="c3" style="background-color:red;width: 240px;height: 60px;display: none; "></div>
+     <div id="c4" style="background-color:green;width: 240px;height: 60px ;display: none;"></div>
+</body>
+<script type="text/javascript">
+window.onload=function(){	
+	var x1=document.getElementById('x1');
+	var x2=document.getElementById('x2');
+	var x3=document.getElementById('x3');
+	var x4=document.getElementById('x4');
+	
+	var c1=document.getElementById('c1');
+	var c2=document.getElementById('c2');
+	var c3=document.getElementById('c3');
+	var c4=document.getElementById('c4');
+	
+	x1.onmouseover=function(){
+		c1.style.display='block';
+		c2.style.display='none';
+		c3.style.display='none';
+		c4.style.display='none';
+		
+		x1.style.backgroundColor='gray';
+	}
+	
+	x1.onmouseout=function(){
+		x4.style.backgroundColor ='white'
+		x1.style.backgroundColor = 'gray'
+		x2.style.backgroundColor = 'white'
+		x3.style.backgroundColor = 'white'	
+	}
+	
+	x2.onmouseover=function(){
+		c2.style.display='block';
+		c1.style.display='none';
+		c3.style.display='none';
+		c4.style.display='none';
+		
+		x2.style.backgroundColor='pink';
+	}
+	
+	x2.onmouseout=function(){
+		x4.style.backgroundColor ='white'
+	    x1.style.backgroundColor = 'white'
+	    x2.style.backgroundColor = 'pink'
+	    x3.style.backgroundColor = 'white'		
+	}
+	
+	x3.onmouseover=function(){
+		c3.style.display='block';
+		c2.style.display='none';
+		c1.style.display='none';
+		c4.style.display='none';
+		
+		x3.style.backgroundColor='red';
+	}
+	
+	x3.onmouseout=function(){
+		x4.style.backgroundColor = 'white'
+        x1.style.backgroundColor = 'white'
+        x2.style.backgroundColor = 'white'
+		x3.style.backgroundColor = 'red'
+		}
+
+		x4.onmouseover = function() {
+			c4.style.display = 'block';
+			c2.style.display = 'none';
+			c3.style.display = 'none';
+			c1.style.display = 'none';
+
+			x4.style.backgroundColor = 'green';
+		}
+
+		x4.onmouseout = function() {
+			x4.style.backgroundColor = 'green'
+			x1.style.backgroundColor = 'white'
+			x2.style.backgroundColor = 'white'
+			x3.style.backgroundColor = 'white'
+		}
+	}
+</script>
+</html>
